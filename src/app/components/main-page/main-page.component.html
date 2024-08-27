@@ -1,0 +1,15 @@
+<div class="content">
+  <span class="title">Main page </span>
+  <span class="title" *ngIf="isLoggedIn">Welcom back, {{ userName }} </span>
+  <a *ngIf="isLoggedIn" role="button" class="button" (click)="logout()">
+    Log Out
+  </a>
+</div>
+<a
+  *ngIf="!isLoggedIn"
+  role="button"
+  class="button"
+  (click)="redirectToLoginPage()"
+>
+  Log In
+</a>
